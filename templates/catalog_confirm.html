@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<table class="table mt-5" >
+
+    <h2>{{ current_car_name }} カタログ請求 入力内容確認</h2>
+    <tbody>
+        <tr>
+            <th scope="row">名前</th>
+            <td>{{params.name}}</td>
+        </tr>
+        <tr>
+            <th scope="row">住所</th>
+            <td>{{params.address}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td>{{params.email}}</td>
+        </tr>
+    </tbody>
+</table>
+<form action="/purchase/catalog/thanks" method="post">
+    <button type="submit" class="btn btn-primary btn-lg btn-block">送信</button>
+    <a href="/purchase/catalog" class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true">戻る</a>
+</form>
+
+{% endblock %}

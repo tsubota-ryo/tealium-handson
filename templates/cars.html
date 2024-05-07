@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<table class="table table-hover table-borderless table-sm" style='margin-top: 30px'>
+
+    {% for car in params %}
+    <tr>
+        <td>
+            <div style='float:left'><a href="{{ url_for('car_detail', car_name=car) }}">{{car}}</a></div>
+        </td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}

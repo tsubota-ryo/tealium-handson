@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<table class="table table-hover table-borderless table-sm" style='margin-top: 30px'>
+    <tr>
+        <td>
+            <div style='float:left'><a href="{{ url_for('form') }}">フォーム</a></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style='float:left'><a href="{{ url_for('product_detail') }}">商品購入</a></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style='float:left'><a href="{{ url_for('cars') }}">車種選択</a></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style='float:left'><a href="{{ url_for('estimate') }}">見積り</a></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style='float:left'><a href="{{ url_for('catalog') }}">カタログ</a></div>
+        </td>
+    </tr>
+
+</table>
+
+{% endblock %}

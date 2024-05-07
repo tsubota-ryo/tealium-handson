@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<dic class="container">
+
+    <h4>以下 {{ cart_len }}点の商品を購入します。</h4>
+
+    <table class="table table-hover table-borderless table-sm" style='margin-top: 30px' id="product_table">
+
+        {% for p in params %}
+        <tr>
+            <td>
+                <div style='float:left'>{{p}}</div>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <a href="/product/thanks">
+        <button class='btn btn-secondary btn-block mt-5' id="kounyu">購入</button>
+    </a>
+    <a href="/product">
+        <button class='btn btn-primary btn-block'>戻る</button>
+    </a>
+
+</dic>
+{% endblock %}

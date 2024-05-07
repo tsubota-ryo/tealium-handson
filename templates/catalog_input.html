@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Form ================================================== -->
+<h2>{{ current_car_name }} カタログ請求</h2>
+<div class="form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <p class="lead">
+                    {% if name %}
+                    こんにちは {{ name }} さん
+                    {% else %}
+                    {{ message }}
+                    {% endif %}
+                </p> -->
+                <form action="/purchase/catalog/confirm" method="post">
+                    <div class="form-group">
+                        <label for="name">名前</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">住所</label>
+                        <input type="text" class="form-control" name='address' placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name='email' placeholder="Email">
+                    </div>
+
+                    
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">送信する</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

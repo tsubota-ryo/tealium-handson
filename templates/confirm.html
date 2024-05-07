@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<table class="table mt-5" id="kakunin_table">
+
+    <h2>確認ページ</h2>
+    <tbody>
+        <tr>
+            <th scope="row">名前</th>
+            <td>{{params.name}}</td>
+        </tr>
+        <tr>
+            <th scope="row">会社名</th>
+            <td>{{params.company}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td>{{params.email}}</td>
+        </tr>
+    </tbody>
+</table>
+<form action="/thanks" method="post">
+    <button type="submit" class="btn btn-primary btn-lg btn-block">送信</button>
+    <a href="/" class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true">戻る</a>
+</form>
+
+{% endblock %}

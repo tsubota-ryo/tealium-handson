@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h1 class="h1">{{ car_name }}</h1>
+    <table class="table table-hover table-borderless" style='margin-top: 30px'>
+
+<p>This is {{ car_name }}'s page.</p>
+<p><a href="{{ url_for('estimate') }}">見積り</a></p>
+<p><a href="{{ url_for('catalog') }}">カタログ請求</a></p>
+
+</table>
+</div>
+<script type="text/javascript">
+    var current_car_type = {{ car_name|tojson }};
+</script>
+{% endblock %}
