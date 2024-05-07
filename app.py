@@ -2,8 +2,7 @@
 
 # from flask import Flask, render_template, request, redirect, url_for, session
 from flask import Flask, session, redirect, url_for, request, render_template
-import numpy as np
-import json
+
 
 app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
